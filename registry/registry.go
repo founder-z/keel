@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/rusenask/docker-registry-client/registry"
+	"github.com/olimsaidov/docker-registry-client/registry"
 
 	log "github.com/sirupsen/logrus"
 )

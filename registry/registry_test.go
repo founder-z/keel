@@ -7,7 +7,7 @@ import (
 
 	"github.com/keel-hq/keel/constants"
 
-	"github.com/rusenask/docker-registry-client/registry"
+	"github.com/olimsaidov/docker-registry-client/registry"
 
 	"fmt"
 	"os"

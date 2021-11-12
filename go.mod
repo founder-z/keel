@@ -50,11 +50,11 @@ require (
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/mfridman/tparse v0.8.2 // indirect
 	github.com/nlopes/slack v0.6.0
+	github.com/olimsaidov/docker-registry-client v0.0.0-20211112204228-59c3de34feaf
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/prometheus/client_golang v1.6.0
 	github.com/rubenv/sql-migrate v0.0.0-20200429072036-ae26b214fa43 // indirect
 	github.com/rusenask/cron v1.1.0
-	github.com/rusenask/docker-registry-client v0.0.0-20200210164146-049272422097
 	github.com/ryanuber/go-glob v1.0.0
 	github.com/sirupsen/logrus v1.6.0
 	github.com/stretchr/testify v1.5.1
