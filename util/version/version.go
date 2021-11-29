@@ -17,7 +17,6 @@ var ErrVersionTagMissing = errors.New("version tag is missing")
 // ErrInvalidSemVer is returned a version is found to be invalid when
 // being parsed.
 var ErrInvalidSemVer = errors.New("invalid semantic version")
-var ErrNoMajorMinorPatchElementsFound = errors.New("No Major.Minor.Patch elements found")
 
 // MustParse - must parse version, if fails - panics
 func MustParse(version string) *types.Version {
@@ -30,12 +29,6 @@ func MustParse(version string) *types.Version {
 
 // GetVersion - parse version
 func GetVersion(version string) (*types.Version, error) {
-
-	parts := strings.SplitN(version, ".", 3)
-	if len(parts) != 2 && len(parts) != 3 {
-		return nil, ErrNoMajorMinorPatchElementsFound
-	}
-
 	v, err := semver.NewVersion(version)
 	if err != nil {
 		if err == semver.ErrInvalidSemVer {

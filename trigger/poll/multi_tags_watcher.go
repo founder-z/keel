@@ -1,14 +1,12 @@
 package poll
 
 import (
-	"sort"
-	"strings"
-
 	"github.com/Masterminds/semver"
 	"github.com/keel-hq/keel/extension/credentialshelper"
 	"github.com/keel-hq/keel/provider"
 	"github.com/keel-hq/keel/registry"
 	"github.com/keel-hq/keel/types"
+	"sort"
 
 	"github.com/prometheus/client_golang/prometheus"
 
@@ -152,10 +150,6 @@ func exists(tag string, events []types.Event) bool {
 func semverSort(tags []string) []*semver.Version {
 	var versions []*semver.Version
 	for _, t := range tags {
-		if len(strings.SplitN(t, ".", 3)) < 2 {
-			// Keep only X.Y.Z+ semver
-			continue
-		}
 		v, err := semver.NewVersion(t)
 		// Filter out non semver tags
 		if err != nil {
